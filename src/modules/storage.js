@@ -1,3 +1,4 @@
+import { sendScores } from '../gamesAPICalls.js';
 import Scores from './constructor.js';
 
 const getScores = () => {
@@ -11,11 +12,12 @@ const getScores = () => {
   return localScores;
 };
 
-const addScores = (name, score) => {
-  const newScore = new Scores(name, score);
+const addScores = (user, score) => {
+  const newScore = new Scores(user, score);
   const scores = getScores();
   scores.push(newScore);
   localStorage.setItem('leaderboard', JSON.stringify(scores));
+  sendScores(newScore);
 };
 
-export { getScores, addScores };
+export { addScores, getScores };

@@ -5,7 +5,7 @@ const renderScores = () => {
   const allEntries = getScores();
   allEntries.forEach((entry) => {
     const scoreItems = document.createElement('li');
-    scoreItems.innerText += `${entry.name}: ${entry.score}`;
+    scoreItems.innerText += `${entry.user}: ${entry.score}`;
     scoresContainer.appendChild(scoreItems);
     return scoresContainer;
   });
