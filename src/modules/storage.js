@@ -1,22 +1,21 @@
-import Scores from "./constructor.js";
-
+import Scores from './constructor.js';
 
 const getScores = () => {
-    let localScores;
-    if(!localStorage.getItem('leaderboard')) {
-        localScores = [];
-    } else {
-        localScores = JSON.parse(localStorage.getItem('leaderboard'));
-    }
+  let localScores;
+  if (!localStorage.getItem('leaderboard')) {
+    localScores = [];
+  } else {
+    localScores = JSON.parse(localStorage.getItem('leaderboard'));
+  }
 
-    return localScores;
-}
+  return localScores;
+};
 
 const addScores = (name, score) => {
-    const newScore = new Scores(name, score);
-    const scores = getScores();
-    scores.push(newScore);
-    localStorage.setItem('leaderboard', JSON.stringify(scores));
-}
+  const newScore = new Scores(name, score);
+  const scores = getScores();
+  scores.push(newScore);
+  localStorage.setItem('leaderboard', JSON.stringify(scores));
+};
 
 export { getScores, addScores };

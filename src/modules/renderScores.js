@@ -1,15 +1,14 @@
-import { getScores } from "./storage"
+import { getScores } from './storage.js';
 
-export const renderScores = () => {
-    const scoresContainer = document.querySelector('.scores-container');
-    const allEntries = getScores();
-    console.log(allEntries)
-    allEntries.forEach((entry) => {
-        const scoreItems = document.createElement('li')
-        console.log(scoreItems)
-        scoreItems.innerText += `${entry.name}: ${entry.score}`;
-        scoresContainer.appendChild(scoreItems);
-        return scoresContainer;
-    });   
-}
+const renderScores = () => {
+  const scoresContainer = document.querySelector('.scores-container');
+  const allEntries = getScores();
+  allEntries.forEach((entry) => {
+    const scoreItems = document.createElement('li');
+    scoreItems.innerText += `${entry.name}: ${entry.score}`;
+    scoresContainer.appendChild(scoreItems);
+    return scoresContainer;
+  });
+};
 
+export default renderScores;
