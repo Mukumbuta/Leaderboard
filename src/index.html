@@ -10,10 +10,50 @@
     <h1>
         Leaderboard
     </h1>
-    <div>
-        <h1>Recent scores</h1>
-        <input type="button" id="refresh-btn" value="Refresh">
-    </div>
+    <section id="add-score" class="container">
+       <div class="leaderboard">
+            <div class="scores-title">
+                <h3>Recent scores</h3>
+                <button type="button" id="refresh-btn">Refresh</button>
+            </div>
+            <div class="board">
+                <ul class="scores">
+                    <li>
+                        Name: 100
+                    </li>
+                    <li>
+                        Name: 100
+                    </li>
+                    <li>
+                        Name: 100
+                    </li>
+                    <li>
+                        Name: 100
+                    </li>
+                    <li>
+                        Name: 100
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <form action="#" id="scores-form">
+            <div class="form-heading">
+                <h3 class="add-score-title">
+                    Add your score
+                </h3>
+            </div>
+            <div class="input-fields-container">
+                <div class="name-field">
+                    <input type="text" name="player-name" id="player-name" placeholder="Your name"> <br  /><br />
+                </div>
+                <div class="score-field">
+                    <input type="number" name="player-score" id="player-score" placeholder="Your score"><br  /><br />
+                </div>
+                <small id="error"></small> <br>
+                <button type="submit" id="addBtn">Submit</button>
+            </div> 
+        </form>
+    </section>
 
 
 </body>
