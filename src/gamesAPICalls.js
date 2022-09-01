@@ -1,23 +1,4 @@
-export const createGame = () => {
-  const gameName = {
-    name: 'Mortal Kombat',
-  };
-  // "Game with ID: lQ3B2YoHFGegJd9ypQQR added."
-
-  fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(gameName),
-  })
-    .then((response) => response.json())
-
-    .then((gameName) => `Success: ${gameName}`)
-    .catch((error) => `Error: ${error}`);
-};
-
-export const populateLeaderBoard = (apiData) => {
+const populateLeaderBoard = (apiData) => {
   const scoresContainer = document.querySelector('.scores-container');
   const records = apiData.result;
   records.forEach((record) => {
@@ -28,7 +9,7 @@ export const populateLeaderBoard = (apiData) => {
   });
 };
 
-export async function getAPIData() {
+const getAPIData = async () => {
   const reqURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/lQ3B2YoHFGegJd9ypQQR/scores/';
   const request = new Request(reqURL);
   const response = await fetch(request);
@@ -36,9 +17,9 @@ export async function getAPIData() {
   const textRecords = await response.text();
   const jsonRecords = JSON.parse(textRecords);
   populateLeaderBoard(jsonRecords);
-}
+};
 
-export const sendScores = (scoresData) => {
+const sendScores = (scoresData) => {
   fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/lQ3B2YoHFGegJd9ypQQR/scores/', {
     method: 'POST',
     headers: {
@@ -51,3 +32,5 @@ export const sendScores = (scoresData) => {
     .then((scoresData) => `Success: ${scoresData}`)
     .catch((error) => `Error: ${error}`);
 };
+
+export { populateLeaderBoard, getAPIData, sendScores };
