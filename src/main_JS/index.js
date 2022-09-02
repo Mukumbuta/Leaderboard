@@ -1,9 +1,7 @@
 import { addScores } from '../modules/storage.js';
 import renderScores from '../modules/renderScores.js';
 import { getAPIData, sendScores } from './gamesAPICalls.js';
-
 import '../scss/styles.scss';
-import * as bootstrap from 'bootstrap'
 
 renderScores();
 const addBtn = document.getElementById('addBtn');

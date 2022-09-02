@@ -1,4 +1,4 @@
-import { sendScores } from '../main_JS/gamesAPICalls';
+import { sendScores } from '../main_JS/gamesAPICalls.js';
 import Scores from './constructor.js';
 
 const getScores = () => {
