@@ -17,28 +17,14 @@
                 <button type="button" id="refresh-btn">Refresh</button>
             </div>
             <div class="board">
-                <ul class="scores">
-                    <li>
-                        Name: 100
-                    </li>
-                    <li>
-                        Name: 100
-                    </li>
-                    <li>
-                        Name: 100
-                    </li>
-                    <li>
-                        Name: 100
-                    </li>
-                    <li>
-                        Name: 100
-                    </li>
+                <ul class="scores-container">
+                   
                 </ul>
             </div>
         </div>
         <form action="#" id="scores-form">
             <div class="form-heading">
-                <h3>
+                <h3 class="add-score-title">
                     Add your score
                 </h3>
             </div>
@@ -47,7 +33,7 @@
                     <input type="text" name="player-name" id="player-name" placeholder="Your name"> <br  /><br />
                 </div>
                 <div class="score-field">
-                    <input type="text" name="player-score" id="player-score" placeholder="Your score"><br  /><br />
+                    <input type="number" name="player-score" id="player-score" placeholder="Your score"><br  /><br />
                 </div>
                 <small id="error"></small> <br>
                 <button type="submit" id="addBtn">Submit</button>

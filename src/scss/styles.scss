@@ -1,0 +1,109 @@
+@import "~bootstrap/scss/bootstrap";
+
+$display-flex: flex;
+$justify-center: center;
+$align-center: center;
+$border: 3px solid #000;
+$padding: 50px;
+$border-radius: 6px;
+$box-shadow: 1px 2px 9px 4px #000;
+$none: none;
+$font-weight700: 700;
+
+html {
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  top: 0;
+}
+
+body {
+  font-family: cursive;
+  color: #17d4fe;
+  background-color: #4d4a5c;
+}
+
+h1 {
+  font-size: 45px;
+  font-weight: $font-weight700;
+  padding: $padding;
+  padding-left: $padding;
+  margin-left: 100px;
+}
+
+.container {
+  display: $display-flex;
+  justify-content: $justify-center;
+  min-height: 500px;
+  gap: 100px;
+
+  .scores-title {
+    display: $display-flex;
+    justify-content: $justify-center;
+    margin-bottom: 30px;
+    gap: 80px;
+  }
+
+  h3 {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .board {
+    padding: 10px;
+    padding-right: 40px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: $box-shadow;
+
+    li {
+      list-style: $none;
+      margin-bottom: 15px;
+      font-weight: $font-weight700;
+      border-bottom: 2px solid rgb(100, 97, 97);
+    }
+  }
+
+  input {
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    color: #000;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    outline: $none;
+    border: $none;
+  }
+
+  button {
+    border: $border;
+    box-shadow: 3px 5px #000;
+    font-size: 15px;
+    font-weight: $font-weight700;
+
+    button:hover {
+      cursor: pointer;
+    }
+  }
+
+  #refresh-btn {
+    padding-inline: 30px;
+  }
+
+  #addBtn {
+    float: right;
+  }
+
+  .add-score-title {
+    margin-bottom: 38px;
+  }
+}
