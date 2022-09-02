@@ -6,9 +6,9 @@
 A JavaScript project for the Leaderboard list app, using webpack and ES6 features, that consumes the Leaderboard API using JavaScript async and await.
 
 ## Built With
-- Major languages: HTML, JavaScript
-- Frameworks:
-- Technologies used: Linters, Git, npm, Webpack
+- Major languages: HTML, SCSS, JavaScript
+- Frameworks: Bootstrap-v5
+- Technologies used: Linters, Git, npm, Webpack, Sass
 
 
 ## Live demo
